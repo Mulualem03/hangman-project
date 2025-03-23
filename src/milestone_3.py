@@ -1,21 +1,23 @@
 import random
 
-def get_valid_input():
+def get_single_letter():
     while True:
-        user_input = input("Enter a single letter: ")
-        if len(user_input) == 1 and user_input.isalpha():
-            return user_input
+        input_letter = input("Enter a single letter: ")
+        if len(input_letter) == 1 and input_letter.isalpha():
+            return input_letter
         else:
             print("Invalid letter. Please, enter a single alphabetical character.")
 
-def check_guess(letter, word):
+def is_letter_in_word(letter, word):
     if letter in word:
         print("Good guess! The letter is in the word.")
     else:
         print("Sorry, the letter is not in the word.")
 
-word_list = ["apple", "banana", "cherry", "mango", "grape"]
-selected_word = random.choice(word_list)
+def run_hangman_turn(word_pool):
+    chosen_word = random.choice(word_pool)
+    player_guess = get_single_letter()
+    is_letter_in_word(player_guess, chosen_word)
 
-guess = get_valid_input()
-check_guess(guess, selected_word)
+word_bank = ["apple", "banana", "cherry", "mango", "grape"]
+run_hangman_turn(word_bank)
