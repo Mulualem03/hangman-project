@@ -42,3 +42,25 @@ This milestone introduces object-oriented programming to structure the game usin
 ### How to Run
 
 
+## Milestone 5: Putting It All Together
+
+This milestone brings all components of the Hangman game together and allows the full game to be played start to finish using object-oriented programming.
+
+### Game Logic Flow
+
+- The main function `play_game()` controls the game loop.
+- It uses the `Hangman` class defined in Milestone 4 to:
+  - Pick a random word
+  - Ask the player to guess letters
+  - Track correct guesses and lives
+  - Detect if the player has won or lost
+
+### How to Run the Game
+
+
+### What I Learned
+
+- How to break a problem into small, testable parts
+- Using classes and methods to manage game state
+- Input validation and clean loop control
+- How to make the code user-friendly and readable
